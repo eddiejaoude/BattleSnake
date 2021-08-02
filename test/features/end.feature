@@ -5,5 +5,5 @@ Feature: BattleSnake End
             | status | "ending..." |
         When I receive a response
         Then response should have a status 200
-        And response should have the following data:
+        And response should have the following object:
             | status | "ending..." |

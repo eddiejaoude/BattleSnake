@@ -4,7 +4,7 @@ Feature: BattleSnake Info
         Given I make a GET request to "http://localhost:3000"
         When I receive a response
         Then response should have a status 200
-        And response should have the following data:
+        And response should have the following object:
             | apiversion | "1"        |
             | author     | "EddieHub" |
             | color      | "#ff0000"  |

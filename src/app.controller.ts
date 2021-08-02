@@ -12,19 +12,20 @@ export class AppController {
 
   @HttpCode(200)
   @Post('start')
-  start(@Body() body) {
+  start(@Body() body: BattleSnake) {
     return this.appService.start(body);
   }
 
   @HttpCode(200)
   @Post('end')
-  end(@Body() body) {
+  end(@Body() body: BattleSnake) {
     return this.appService.end(body);
   }
 
   @HttpCode(200)
   @Post('move')
-  move(@Body() body) {
+  move(@Body() body: BattleSnake) {
+    console.dir(body, { depth: null });
     return this.appService.move(body);
   }
 }
